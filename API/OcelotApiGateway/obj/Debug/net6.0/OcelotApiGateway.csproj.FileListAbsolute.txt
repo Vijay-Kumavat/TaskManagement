@@ -35,3 +35,5 @@ C:\Users\VMAdmin\TaskManagement\API\OcelotApiGateway\obj\Debug\net6.0\refint\Oce
 C:\Users\VMAdmin\TaskManagement\API\OcelotApiGateway\obj\Debug\net6.0\OcelotApiGateway.pdb
 C:\Users\VMAdmin\TaskManagement\API\OcelotApiGateway\obj\Debug\net6.0\OcelotApiGateway.genruntimeconfig.cache
 C:\Users\VMAdmin\TaskManagement\API\OcelotApiGateway\obj\Debug\net6.0\ref\OcelotApiGateway.dll
+C:\Users\VMAdmin\TaskManagement\API\OcelotApiGateway\bin\Debug\net6.0\Consul.dll
+C:\Users\VMAdmin\TaskManagement\API\OcelotApiGateway\bin\Debug\net6.0\Ocelot.Provider.Consul.dll

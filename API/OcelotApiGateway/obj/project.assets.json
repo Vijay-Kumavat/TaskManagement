@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Consul/1.7.14.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Consul.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Consul.dll": {}
+        }
+      },
       "FluentValidation/11.11.0": {
         "type": "package",
         "compile": {
@@ -155,6 +168,19 @@
           "lib/net6.0/Ocelot.dll": {}
         }
       },
+      "Ocelot.Provider.Consul/23.4.2": {
+        "type": "package",
+        "dependencies": {
+          "Consul": "1.7.14.5",
+          "Ocelot": "23.4.2"
+        },
+        "compile": {
+          "lib/net6.0/Ocelot.Provider.Consul.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Ocelot.Provider.Consul.dll": {}
+        }
+      },
       "Swashbuckle.AspNetCore/6.2.3": {
         "type": "package",
         "dependencies": {
@@ -218,6 +244,21 @@
     }
   },
   "libraries": {
+    "Consul/1.7.14.5": {
+      "sha512": "0uFsdAG4/4RiPoax7gQ2EGq6egTH8LSEwAGRLC8ykyFtleDwFqvJg/7HG4e2dkdRn65mh+RaRD8O9+sLeXxKZg==",
+      "type": "package",
+      "path": "consul/1.7.14.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "consul.1.7.14.5.nupkg.sha512",
+        "consul.nuspec",
+        "lib/net461/Consul.dll",
+        "lib/net461/Consul.xml",
+        "lib/netstandard2.0/Consul.dll",
+        "lib/netstandard2.0/Consul.xml"
+      ]
+    },
     "FluentValidation/11.11.0": {
       "sha512": "cyIVdQBwSipxWG8MA3Rqox7iNbUNUTK5bfJi9tIdm4CAfH71Oo5ABLP4/QyrUwuakqpUEPGtE43BDddvEehuYw==",
       "type": "package",
@@ -543,6 +584,23 @@
         "ocelot.nuspec"
       ]
     },
+    "Ocelot.Provider.Consul/23.4.2": {
+      "sha512": "A0WUOEjgbHpznFyTds1ThwSOdNP87YQQhHshQP/Eerwbn676zSEn7n8pr88cEGmYFIKiQTMaGY2Vb/F76jri3w==",
+      "type": "package",
+      "path": "ocelot.provider.consul/23.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Ocelot.Provider.Consul.dll",
+        "lib/net6.0/Ocelot.Provider.Consul.xml",
+        "lib/net7.0/Ocelot.Provider.Consul.dll",
+        "lib/net7.0/Ocelot.Provider.Consul.xml",
+        "lib/net8.0/Ocelot.Provider.Consul.dll",
+        "lib/net8.0/Ocelot.Provider.Consul.xml",
+        "ocelot.provider.consul.23.4.2.nupkg.sha512",
+        "ocelot.provider.consul.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.2.3": {
       "sha512": "cnzQDn0Le+hInsw2SYwlOhOCPXpYi/szcvnyqZJ12v+QyrLBwAmWXBg6RIyHB18s/mLeywC+Rg2O9ndz0IUNYQ==",
       "type": "package",
@@ -654,6 +712,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Ocelot >= 23.4.2",
+      "Ocelot.Provider.Consul >= 23.4.2",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -697,6 +756,10 @@
         "targetAlias": "net6.0",
         "dependencies": {
           "Ocelot": {
+            "target": "Package",
+            "version": "[23.4.2, )"
+          },
+          "Ocelot.Provider.Consul": {
             "target": "Package",
             "version": "[23.4.2, )"
           },

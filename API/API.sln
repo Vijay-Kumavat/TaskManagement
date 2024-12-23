@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{DE0D199D-0785-4C3A-986B-34DF4EF57EA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGateway", "OcelotApiGateway\OcelotApiGateway.csproj", "{DF6CF94C-00C2-4113-B70E-618539373AC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotApiGateway", "OcelotApiGateway\OcelotApiGateway.csproj", "{DF6CF94C-00C2-4113-B70E-618539373AC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskTracker.Tests", "TaskTracker.Tests\TaskTracker.Tests.csproj", "{1B4E8842-D147-4CB3-AE96-3795D8E33B6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DF6CF94C-00C2-4113-B70E-618539373AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF6CF94C-00C2-4113-B70E-618539373AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF6CF94C-00C2-4113-B70E-618539373AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B4E8842-D147-4CB3-AE96-3795D8E33B6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B4E8842-D147-4CB3-AE96-3795D8E33B6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B4E8842-D147-4CB3-AE96-3795D8E33B6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B4E8842-D147-4CB3-AE96-3795D8E33B6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
