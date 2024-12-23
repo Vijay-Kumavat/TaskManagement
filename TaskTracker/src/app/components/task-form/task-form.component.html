@@ -1,0 +1,73 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card p-4" style="max-width: 500px; width: 100%;">
+      <h2 class="text-center mb-4">{{ isEdit ? 'Edit Task' : 'Create New Task' }}</h2>
+      <form (ngSubmit)="onSubmit()" #taskForm="ngForm">
+        
+        <!-- Title -->
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            [(ngModel)]="task.title"
+            name="title"
+            required
+            #title="ngModel"
+          />
+          <div *ngIf="title.invalid && title.touched" class="text-danger">
+            Title is required.
+          </div>
+        </div>
+  
+        <!-- Description -->
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea
+            class="form-control"
+            id="description"
+            [(ngModel)]="task.description"
+            name="description"
+            required
+            #description="ngModel"
+          ></textarea>
+          <div *ngIf="description.invalid && description.touched" class="text-danger">
+            Description is required.
+          </div>
+        </div>
+  
+        <!-- Status -->
+        <div class="mb-3">
+          <label for="status" class="form-label">Status</label>
+          <select class="form-control" id="status" [(ngModel)]="task.status" name="status" required>
+            <option value="Pending">Pending</option>
+            <option value="InProgress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+        </div>
+  
+        <!-- Due Date -->
+        <div class="mb-3">
+          <label for="dueDate" class="form-label">Due Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="dueDate"
+            [(ngModel)]="task.dueDate"
+            name="dueDate"
+            required
+            #dueDate="ngModel"
+          />
+          <div *ngIf="dueDate.invalid && dueDate.touched" class="text-danger">
+            Due date is required.
+          </div>
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary" [disabled]="taskForm.invalid">
+          {{ isEdit ? 'Update Task' : 'Create Task' }}
+        </button>
+      </form>
+    </div>
+  </div>
+  
