@@ -1,4 +1,5 @@
 using API.Models;
+using API.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<TaskDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("TaskDb")));
+builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 
 builder.Services.AddCors(options =>
 {
