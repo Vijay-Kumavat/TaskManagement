@@ -1,7 +1,7 @@
 ﻿{
     "Routes": [
         {
-            "DownstreamPathTemplate": "/api/tasks",
+            "DownstreamPathTemplate": "/api/tasks/{id}", // Downstream path for retrieving/updating a specific task
             "DownstreamScheme": "https",
             "DownstreamHostAndPorts": [
                 {
@@ -9,8 +9,20 @@
                     "Port": 7185
                 }
             ],
-            "UpstreamPathTemplate": "/tasks",
-            "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+            "UpstreamPathTemplate": "/tasks/{id}", // Upstream path for GET/PUT/DELETE specific tasks
+            "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/tasks", // Downstream path for creating a task
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7185
+                }
+            ],
+            "UpstreamPathTemplate": "/tasks", // Upstream path for POST to create a task
+            "UpstreamHttpMethod": [ "POST" ]
         }
     ],
     "GlobalConfiguration": {
