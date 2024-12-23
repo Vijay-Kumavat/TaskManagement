@@ -18,7 +18,7 @@ builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowLocalhost",
-        builder => builder.WithOrigins("http://localhost:4200")  // Add the URL of your frontend
+        builder => builder.WithOrigins("http://localhost:3000")  // Add the URL of your frontend
                           .AllowAnyMethod()
                           .AllowAnyHeader());
 });
